@@ -6,6 +6,7 @@ import AIImageGenerator from "./components/AIImageGenerator";
 import AITextSummarizer from "./components/AITextSummarizer";
 import CTAButton from "./components/CTAButton";
 import { useLanguage } from "./components/LanguageProvider";
+import Link from "next/link";
 
 export default function Home() {
   const { t } = useLanguage();
@@ -33,7 +34,7 @@ export default function Home() {
 
       <section className="stats-strip section-wrap"><div><strong>4×</strong><span>{t.home.points[0]}</span></div><div><strong>10 min</strong><span>{t.home.points[2]}</span></div><div><strong>6</strong><span>{t.home.trusted}</span></div></section>
 
-      <section className="audience-section section-wrap"><div className="section-heading"><div><p className="eyebrow">{t.home.featureEyebrow}</p><h2>{t.home.featureTitle}</h2></div><p>{t.home.featureText}</p></div><div className="audience-grid"><article><span>01</span><h3>{t.home.personal}</h3><p>{t.home.personalText}</p><a className="text-link" href="#tools">{t.home.primary}<span>↗</span></a></article><article><span>02</span><h3>{t.home.agency}</h3><p>{t.home.agencyText}</p><a className="text-link" href="/services">{t.nav.tools}<span>↗</span></a></article><article><span>03</span><h3>{t.home.toolsEyebrow}</h3><p>{t.home.toolsText}</p><a className="text-link" href="/contact">{t.nav.contact}<span>↗</span></a></article></div></section>
+      <section className="audience-section section-wrap"><div className="section-heading"><div><p className="eyebrow">{t.home.featureEyebrow}</p><h2>{t.home.featureTitle}</h2></div><p>{t.home.featureText}</p></div><div className="audience-grid"><article><span>01</span><h3>{t.home.personal}</h3><p>{t.home.personalText}</p><a className="text-link" href="#tools">{t.home.primary}<span>↗</span></a></article><article><span>02</span><h3>{t.home.agency}</h3><p>{t.home.agencyText}</p><Link className="text-link" href="/services">{t.nav.tools}<span>↗</span></Link></article><article><span>03</span><h3>{t.home.toolsEyebrow}</h3><p>{t.home.toolsText}</p><Link className="text-link" href="/contact">{t.nav.contact}<span>↗</span></Link></article></div></section>
 
       <section className="section-wrap tools-section" id="tools">
         <div className="section-heading"><div><p className="eyebrow">{t.home.toolsEyebrow}</p><h2>{t.home.toolsTitle}</h2></div><p>{t.home.toolsText}</p></div>
